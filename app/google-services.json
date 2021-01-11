@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "891308706324",
+    "project_id": "ticketsave05",
+    "storage_bucket": "ticketsave05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891308706324:android:7af24cf65bd7e820a5f501",
+        "android_client_info": {
+          "package_name": "com.marcosledesma.a05_ticketsave"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891308706324-mh1ah7tq6i26aj26f5csr0hbdpicb4g9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtE22w3WlC0SD8hVYsMA0R6mgVrIZl6WE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891308706324-mh1ah7tq6i26aj26f5csr0hbdpicb4g9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
