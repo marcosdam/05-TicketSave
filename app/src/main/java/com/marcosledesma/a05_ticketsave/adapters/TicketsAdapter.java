@@ -34,6 +34,7 @@ public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.TicketVH
     @Override
     public TicketVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View elemento = LayoutInflater.from(context).inflate(resource, null);   // Elemento
+        elemento.setLayoutParams(new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)); // Parámetros
         return new TicketVH(elemento);
     }
 

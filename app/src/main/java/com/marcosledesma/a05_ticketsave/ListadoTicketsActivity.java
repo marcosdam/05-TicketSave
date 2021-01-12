@@ -28,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -172,8 +173,7 @@ public class ListadoTicketsActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (!txtComercio.getText().toString().isEmpty()
-                        && txtImporte.getText().toString().isEmpty()
-                        && txtFecha.getText().toString().isEmpty()){
+                        && !txtImporte.getText().toString().isEmpty()){
                     // Crear Ticket
                     Ticket ticket = new Ticket();
                     ticket.setUrlImagen(currentPhotoPath);
@@ -192,6 +192,7 @@ public class ListadoTicketsActivity extends AppCompatActivity {
                     // Añadir ticket a listaTickets y notificar al Adapter
                     listaTickets.add(ticket);
                     adapter.notifyDataSetChanged();
+                    Log.d("ERROR", "FINE---------------"+listaTickets.size());
                 }
             }
         });
