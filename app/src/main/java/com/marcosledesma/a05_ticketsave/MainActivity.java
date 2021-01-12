@@ -40,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        // Para el logOut
+        // FirebaseAuth.getInstance().signOut();
+
         // Listener btnDoLogin
         binding.btnDoLoginLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     //
     private void updateUI(FirebaseUser user) {
-        if (user != null){
+        if (user != null) {
             // Abriré la nueva ventana (ListadoTicketsActivity)
             Configuracion.currentUser = user;
             startActivity(new Intent(this, ListadoTicketsActivity.class));
@@ -131,8 +134,6 @@ public class MainActivity extends AppCompatActivity {
                             Configuracion.currentUser = null;   //
                             updateUI(null);
                         }
-
-                        // ...
                     }
                 });
     }

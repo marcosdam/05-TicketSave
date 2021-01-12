@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.marcosledesma.a05_ticketsave.R;
 import com.marcosledesma.a05_ticketsave.configuraciones.Configuracion;
 import com.marcosledesma.a05_ticketsave.modelos.Ticket;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -41,7 +42,8 @@ public class TicketsAdapter extends RecyclerView.Adapter<TicketsAdapter.TicketVH
     // Obtener todos los datos del ticket y pintarlos en el TicketViewHolder
     @Override
     public void onBindViewHolder(@NonNull TicketVH holder, int position) {
-        holder.imgTicket.setImageURI(Uri.parse(objects.get(position).getUrlImagen()));
+        Picasso.get().load(objects.get(position).getUrlImagen()).into(holder.imgTicket);
+        // holder.imgTicket.setImageURI(Uri.parse(objects.get(position).getUrlImagen()));
         holder.txtComercio.setText(objects.get(position).getNombreComercio());
         holder.txtFecha.setText(Configuracion.sdf.format(objects.get(position).getFechaCompra()));
         holder.txtImporte.setText(Configuracion.nf.format(objects.get(position).getImporteCompra()));
