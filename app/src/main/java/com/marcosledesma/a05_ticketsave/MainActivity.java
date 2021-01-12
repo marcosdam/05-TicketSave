@@ -85,18 +85,18 @@ public class MainActivity extends AppCompatActivity {
                             Log.w("TAG", "createUserWithEmail:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Registro fallido.",
                                     Toast.LENGTH_SHORT).show();
-                            Configuracion.currentUser = null;   //
+                            Configuracion.currentUser = null;
                             updateUI(null);
                         }
-
-                        // ...
                     }
                 });
     }
 
+    //
     private void updateUI(FirebaseUser user) {
         if (user != null){
             // Abriré la nueva ventana (ListadoTicketsActivity)
+            Configuracion.currentUser = user;
             startActivity(new Intent(this, ListadoTicketsActivity.class));
             // Cierra la ventana
             finish();
